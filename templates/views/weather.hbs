@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}} {{!-- NOTE: inside partials file --}}
+</head>
+
+<body style="background-image: url(../images/weather6.jpg);background-size: 100vw 100vh;background-repeat: no-repeat;">
+    {{>navbar}} {{!-- NOTE: inside partials file --}}
+
+    <!-- main header -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                
+                <div class="main_content">
+                    <form action="" class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="tempInformation">
+                    <div class="top_layer">
+                        <p id="day">Day</p>
+                        <p id="today_date">Month Date</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get Output Here</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
+                            <p id="temp_status"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{>footer}} {{!-- NOTE: inside partials file --}}
+
+
+    {{!-- JavaScript --}}
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
