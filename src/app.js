@@ -25,11 +25,10 @@ app.get("/weather", (req, resp) => {
     resp.render("weather");
 });
 
-app.get("*", (req, resp) => {
-    const errorMsg = {
-        msg: "ERROR 404. The page you're looking for can't be found.",
-    }
-    resp.render("404error", {errorMsg});
+app.get(/(.*)/, (req, res) => {
+    res.render("404error", {
+        errorMsg: "Opps! Page Not Found"
+    });
 });
 
 
